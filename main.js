@@ -1,7 +1,7 @@
 
 
 function openStream(){
-    return navigator.mediaDevices.getUserMedia({audio: true, video: true});
+    return navigator.mediaDevices.getUserMedia({audio: true, video: false});
 }
 
 function playStream(idVideo, stream) {
