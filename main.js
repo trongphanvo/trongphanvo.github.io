@@ -1,4 +1,4 @@
-// const socket = io('http://localhost:3000')
+
 
 function openStream(){
     return navigator.mediaDevices.getUserMedia({audio: true, video: true});
