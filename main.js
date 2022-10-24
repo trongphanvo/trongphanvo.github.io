@@ -33,11 +33,13 @@ $("#call").click(() => {
 
 peer.on("call", (call) => {
   openStream().then((stream) => {
+    localStream = stream;
     playStream("video1", stream);
     call.answer(stream);
     call.on("stream", (remoteStream) => playStream("video2", remoteStream));
   });
 });
+
 let stateVideo = true;
 $("#signup").click(() => {
   if (stateVideo) {
@@ -48,6 +50,7 @@ $("#signup").click(() => {
     stateVideo = true;
   }
 });
+
 let stateSound = true;
 $("#signup2").click(() => {
   if (stateSound) {
